@@ -1,0 +1,59 @@
+Project: frogobogo ($FROB)
+
+🧠 Overview:
+Create a high-energy, extremely funny, chaotic and animation-rich meme coin site for frogobogo ($FROB) — a tribe of unhinged frogs that have declared war on everything boring. Design needs to be unpredictable, fun, and scroll-trigger-hyperactive.
+
+🎯 Main Instructions:
+- Add Twitter button linking to: https://x.com/frogobogo
+- Add large "BUY ON PUMP.FUN" button linking to: https://pump.fun
+- Use ALL uploaded images as key visuals. Each image should have its own section with a hilarious story (min 250-300 characters).
+- Font: Big, goofy, bold.
+- Animation: Lots of it. Hover effects, bounce, shake, rotate, glitch. Make the site ALIVE.
+- Style: Retro-internet, vaporwave colors, comic explosions, Looney Tunes chaos.
+- Responsive (desktop is priority).
+
+📦 Structure:
+1. **Header**
+   - Logo (logo.jpg) + name "$FROB" pulsating
+   - Twitter + Pump buttons with bounce effect
+
+2. **Hero Section**
+   - Fullscreen banner (banner.jpg)
+   - Central glowing slogan: "Frogobogo is the End of Reason"
+   - CTA: BUY ON PUMPFUN
+
+3. **About Section**
+   - "What is Frogobogo?" — paragraph that breaks into pieces on scroll
+   - Short meme-legend how frogs escaped the toilet, mutated, took over DeFi
+
+4. **Frog Gallery**
+   - Use each image in its own div
+   - Each image gets a floating caption with a funny story
+   - Examples:
+     - “This frog just squatted 180kg and said ribbit.”
+     - “The council of spears is deciding your wallet’s fate.”
+     - “That’s not a toilet, that’s HQ.”
+     - “Chad frog eats spinach and fear for breakfast.”
+     - “This frog has 4 wives and still YOLO’d his portfolio.”
+     - “Smile frog is your financial advisor now.”
+
+5. **Interactive Block**
+   - Button “Summon the Frogs” that triggers rain of frogs with sound FX
+   - Hover on frogs = croak sound + jump
+
+6. **Roadmap**
+   - Q1: Frogs crawl out of the bowl
+   - Q2: FROB goes viral
+   - Q3: Merch, community takeovers
+   - Q4: Tadpole airdrops
+
+7. **Final CTA**
+   - “Join the pond or be gone”
+   - Repeat Buy + Twitter buttons
+   - Add hidden easter frog somewhere
+
+🔥 Reminders:
+- Max chaotic-fun energy
+- Avoid minimalism
+- Add borders, hover states, transition triggers
+- All stories must be hilarious

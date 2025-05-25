@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+:root {
+  --main-bg: linear-gradient(135deg, #ff61d2 0%, #fe9090 40%, #00f2fe 100%);
+  --accent1: #ff61d2;
+  --accent2: #fe9090;
+  --accent3: #00f2fe;
+  --accent4: #43e97b;
+  --accent5: #fff200;
+  --text: #fffbe7;
+  --border: #ff61d2;
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--text);
+  font-family: 'Luckiest Guy', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 5vw 16px 5vw;
+  background: linear-gradient(90deg, #fff200 0%, #ff61d2 100%);
+  border-bottom: 6px double var(--accent3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 8px 32px #ff61d2;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.logo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid var(--accent5);
+  box-shadow: 0 0 48px var(--accent1), 0 0 0 12px var(--accent3) inset;
+  animation: logoWiggle 2.5s infinite;
+  background: #fff;
+}
+@keyframes logoWiggle {
+  0%, 100% { transform: rotate(-6deg) scale(1.05); }
+  20% { transform: rotate(6deg) scale(1.1); }
+  40% { transform: rotate(-4deg) scale(1.08); }
+  60% { transform: rotate(4deg) scale(1.12); }
+  80% { transform: rotate(-2deg) scale(1.09); }
+}
+.name {
+  font-size: 4rem;
+  color: var(--accent5);
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 var(--accent1), 4px 4px 0 var(--accent3);
+  animation: popName 1.2s infinite alternate;
+}
+@keyframes popName {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08) rotate(-2deg); }
+}
+.header-buttons {
+  display: flex;
+  gap: 24px;
+}
+.btn {
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 20px;
+  border: 4px solid var(--accent5);
+  background: linear-gradient(90deg, var(--accent1), var(--accent3), var(--accent5));
+  color: #1a1a2e;
+  cursor: pointer;
+  box-shadow: 0 4px 24px var(--accent2);
+  transition: transform 0.18s, box-shadow 0.18s, background 0.3s;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 0 var(--accent2);
+  animation: btnBounce 1.5s infinite alternate;
+}
+.btn:hover, .btn:focus {
+  background: linear-gradient(90deg, var(--accent5), var(--accent3), var(--accent1));
+  color: var(--accent1);
+  transform: scale(1.12) rotate(-2deg);
+  box-shadow: 0 8px 32px var(--accent3);
+  animation: btnPop 0.3s;
+}
+@keyframes btnBounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px) scale(1.08); }
+}
+@keyframes btnPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+  100% { transform: scale(1.12); }
+}
+.pump-btn {
+  animation: btnWiggle 2s infinite alternate;
+}
+@keyframes btnWiggle {
+  0% { transform: rotate(-2deg); }
+  100% { transform: rotate(2deg); }
+}
+.twitter-btn {
+  animation: btnRotate 2.5s infinite alternate;
+}
+@keyframes btnRotate {
+  0% { transform: rotate(-3deg); }
+  100% { transform: rotate(3deg); }
+}
+
+.hero {
+  min-height: 60vh;
+  background: url('banner.jpg') center/cover no-repeat, linear-gradient(135deg, var(--accent3) 0%, var(--accent1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 8px 32px var(--accent1);
+}
+.hero-content {
+  background: rgba(255,255,255,0.85);
+  padding: 48px 32px;
+  border-radius: 32px;
+  text-align: center;
+  box-shadow: 0 0 32px var(--accent2);
+  margin: 48px 0;
+}
+.glowing-slogan {
+  font-size: 2.5rem;
+  color: var(--accent1);
+  margin-bottom: 32px;
+  text-shadow: 2px 2px 0 var(--accent5), 4px 4px 0 var(--accent3);
+  animation: popName 1.2s infinite alternate;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--accent5);
+  margin: 48px 0 24px 0;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 2px 2px 0 var(--accent1), 4px 4px 0 var(--accent3);
+  animation: popName 1.2s infinite alternate;
+}
+
+.about {
+  background: linear-gradient(90deg, var(--accent3) 0%, var(--accent5) 100%);
+  border-left: 12px solid var(--accent1);
+  border-radius: 0 32px 32px 0;
+  margin: 32px 0;
+  padding: 32px 5vw;
+  box-shadow: 0 0 24px var(--accent3);
+}
+.about-text p {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  line-height: 1.5;
+  color: #1a1a2e;
+  animation: fadeInUp 1s both;
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  margin: 48px 0;
+}
+.frog-card {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  background: linear-gradient(90deg, var(--accent5) 0%, var(--accent2) 100%);
+  border: 6px dashed var(--accent1);
+  border-radius: 48px;
+  padding: 32px 48px;
+  box-shadow: 0 0 48px var(--accent1);
+  max-width: 1200px;
+  width: 98vw;
+  animation: cardAppear 1.2s both;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.frog-card:hover {
+  box-shadow: 0 0 64px var(--accent5), 0 0 32px var(--accent3);
+  transform: scale(1.03) rotate(-2deg);
+  animation: cardBounce 0.5s;
+}
+@keyframes cardAppear {
+  0% { opacity: 0; transform: scale(0.8) rotate(-6deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+@keyframes cardBounce {
+  0% { transform: scale(1) rotate(0); }
+  50% { transform: scale(1.08) rotate(2deg); }
+  100% { transform: scale(1.03) rotate(-2deg); }
+}
+.frog-img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 8px solid var(--accent3);
+  box-shadow: 0 0 48px var(--accent4), 0 0 0 12px var(--accent5) inset;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #fff;
+  animation: frogWiggle 2.5s infinite;
+}
+.frog-img:hover {
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 0 64px var(--accent2), 0 0 0 16px var(--accent5) inset;
+  animation: frogPop 0.4s;
+}
+@keyframes frogWiggle {
+  0%, 100% { transform: rotate(-4deg) scale(1.05); }
+  20% { transform: rotate(4deg) scale(1.1); }
+  40% { transform: rotate(-2deg) scale(1.08); }
+  60% { transform: rotate(2deg) scale(1.12); }
+  80% { transform: rotate(-1deg) scale(1.09); }
+}
+@keyframes frogPop {
+  0% { transform: scale(1) rotate(0); }
+  50% { transform: scale(1.2) rotate(10deg); }
+  100% { transform: scale(1.15) rotate(8deg); }
+}
+.frog-story {
+  font-size: 1.3rem;
+  color: var(--accent1);
+  text-shadow: 2px 2px 0 var(--accent5), 4px 4px 0 var(--accent3);
+  animation: fadeInUp 1.2s both;
+  max-width: 500px;
+}
+
+.interactive {
+  background: linear-gradient(90deg, var(--accent2) 0%, var(--accent3) 100%);
+  border-radius: 32px;
+  margin: 48px 5vw;
+  padding: 32px 0;
+  box-shadow: 0 0 32px var(--accent2);
+  text-align: center;
+}
+.summon-btn {
+  font-size: 2rem;
+  background: linear-gradient(90deg, var(--accent4), var(--accent3), var(--accent5));
+  color: #1a1a2e;
+  border: 4px solid var(--accent4);
+  margin: 24px 0 0 0;
+  animation: btnBounce 1.5s infinite alternate;
+}
+
+.roadmap {
+  margin: 48px 0;
+  padding: 32px 5vw;
+  background: linear-gradient(90deg, var(--accent3) 0%, var(--accent1) 100%);
+  border-radius: 32px;
+  box-shadow: 0 0 24px var(--accent3);
+}
+.roadmap-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.roadmap-item {
+  background: linear-gradient(90deg, var(--accent5) 0%, var(--accent2) 100%);
+  border: 4px solid var(--accent1);
+  border-radius: 24px;
+  padding: 32px 40px;
+  min-width: 220px;
+  max-width: 340px;
+  box-shadow: 0 0 24px var(--accent1);
+  animation: cardAppear 1.2s both;
+  font-size: 1.2rem;
+  color: #1a1a2e;
+}
+.roadmap-item h3 {
+  color: var(--accent2);
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  text-shadow: 2px 2px 0 var(--accent5);
+}
+
+footer {
+  background: linear-gradient(90deg, #fff200 0%, #ff61d2 100%);
+  border-top: 6px double var(--accent3);
+  padding: 32px 5vw 16px 5vw;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 -8px 32px #ff61d2;
+}
+.cta-title {
+  font-size: 2.2rem;
+  color: var(--accent1);
+  margin-bottom: 24px;
+  text-shadow: 2px 2px 0 var(--accent5), 4px 4px 0 var(--accent3);
+}
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+.easter-egg {
+  position: absolute;
+  right: 5vw;
+  bottom: 16px;
+}
+.hidden-frog {
+  width: 72px;
+  height: 72px;
+  opacity: 0.9;
+  filter: grayscale(0.3) blur(0.5px);
+  transition: filter 0.2s, opacity 0.2s;
+}
+.hidden-frog:hover {
+  filter: none;
+  opacity: 1;
+  animation: frogPop 0.4s;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .frog-img {
+    width: 220px;
+    height: 220px;
+  }
+  .frog-card {
+    gap: 24px;
+    padding: 24px 12px;
+  }
+}
+@media (max-width: 900px) {
+  .gallery, .roadmap-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .frog-card, .roadmap-item {
+    max-width: 98vw;
+    min-width: unset;
+  }
+  .frog-img {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media (max-width: 600px) {
+  header, .about, .roadmap, .hero-content, .interactive, footer {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .frog-img {
+    width: 96px;
+    height: 96px;
+  }
+  .frog-card {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 8px;
+  }
+  .roadmap-item {
+    padding: 12px 8px;
+  }
+  .easter-egg {
+    right: 2vw;
+    bottom: 8px;
+  }
+} 
